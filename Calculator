@@ -1,0 +1,38 @@
+@echo off
+echo Podaj x i y
+set /p x=
+set /p y=
+echo 1 = dodawanie
+echo 2 = odejmowanie
+echo 3 = mnozenie
+echo 4 = dzielenie
+set /p wybor=
+
+if %wybor% EQU 1 goto dodawanie
+if %wybor% EQU 2 goto odejmowanie
+if %wybor% EQU 3 goto mnozenie
+if %wybor% EQU 4 goto dzielenie
+
+:dodawanie
+	SET /a suma=%x%+%y%
+	echo Wynik : %suma%
+	goto koniec
+	
+:odejmowanie
+	set /a roznica=%x%-%y%
+	echo Wynik : %roznica%
+	goto koniec
+	
+:mnozenie
+	set /a iloczyn=%x%*%y%
+	echo Wynik : %iloczyn%
+	goto koniec
+	
+:dzielenie
+	set /a iloraz=%x%/%y%
+	echo Wynik : %iloraz%
+	goto koniec
+	
+:koniec
+	echo No to nauraaa
+pause
